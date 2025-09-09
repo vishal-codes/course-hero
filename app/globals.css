@@ -1,0 +1,101 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+body {
+  color: white;
+  min-height: 100vh;
+  background-image: linear-gradient(to bottom, #040016, #010008);
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-150%);
+  }
+  100% {
+    transform: translateX(150%);
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer 2s ease-in-out infinite;
+}
+
+@keyframes pulse-border {
+  0% {
+    box-shadow: 0 0 0 0 #ff7a21b3;
+  }
+  70% {
+    box-shadow: 0 0 0 10px #ff7a2100;
+  }
+  100% {
+    box-shadow: 0 0 0 0 #ff7a2100;
+  }
+}
+
+.animate-pulse-border {
+  animation: pulse-border 2s infinite;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes shimmer-text {
+  0% {
+    background-position: 500% 0;
+  }
+  100% {
+    background-position: -500% 0;
+  }
+}
+
+.shimmer-text {
+  background-image: linear-gradient(
+    120deg,
+    #ff7a21 0%,
+    #d5d8dd 20%,
+    #ff9f5a 40%,
+    #ff7a21 60%
+  );
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: shimmer-text 15s infinite linear;
+}
+
+.shimmer-features-text {
+  background-image: linear-gradient(
+    135deg,
+    #0369a1 0%,
+    #9333ea 25%,
+    #0369a1 50%,
+    #9333ea 75%,
+    #0369a1 100%
+  );
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: shimmer-text 15s infinite linear;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-800;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-600 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-500;
+}
+
