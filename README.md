@@ -6,6 +6,8 @@ The ultimate course selection platform for Cal State Fullerton Titans. Find, com
 
 Visit [Course Hero](https://course-hero.vishal-codes.workers.dev/) to get insights regarding courses, professors and clear your doubts using Alexis AI chat bot.
 
+[Course_Hero-Backend](https://github.com/vishal-codes/course-hero-rag-bot)
+
 ## ✨ Features
 
 - Professor Insights
